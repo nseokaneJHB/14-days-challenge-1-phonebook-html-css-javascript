@@ -1,1 +1,1 @@
-# 14-days-challenge-1-phonebook-html-css-javascript
+# 14 Days Challenge 1 Phonebook (html, css, javascript)
