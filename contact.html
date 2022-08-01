@@ -19,23 +19,23 @@
 		<form class="container-fluid mt-5" style="max-width: 800px;">
 			<div class="container text-white">
 				<figure class="figure d-block mx-auto mb-3">
-					<img class="figure-img img-fluid rounded-circle d-block mx-auto" style="max-width: 200px; max-height: 200px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
-					<figcaption class="figure-caption text-center text-white fw-bold">John Doe</figcaption>
+					<img class="figure-img img-fluid rounded-circle d-block mx-auto" id="profileImageView" style="max-width: 200px; max-height: 200px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
+					<figcaption class="figure-caption text-center text-white fw-bold" id="fullNameCaption">John Doe</figcaption>
 				</figure>
 				<div class="form-floating mb-3 ">
-					<input type="text" readonly class="form-control-plaintext text-white" id="firstName" placeholder="John" value="John">
+					<input type="text" readonly class="form-control-plaintext text-white" id="firstNameText" placeholder="John" value="">
 					<label for="firstName">First Name</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="text" readonly class="form-control-plaintext text-white" id="lastName" placeholder="Doe" value="Doe">
+					<input type="text" readonly class="form-control-plaintext text-white" id="lastNameText" placeholder="Doe" value="">
 					<label for="lastName">Last Name</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="text" readonly class="form-control-plaintext text-white" id="phoneNumber" placeholder="+27840000000" value="+27840000000">
+					<input type="text" readonly class="form-control-plaintext text-white" id="phoneNumberText" placeholder="+27840000000" value="">
 					<label for="phoneNumber">Phone Number</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="email" readonly class="form-control-plaintext text-white" id="email" placeholder="johndoe@gmail.com" value="johndoe@gmail.com">
+					<input type="email" readonly class="form-control-plaintext text-white" id="emailText" placeholder="johndoe@gmail.com" value="">
 					<label for="email">Email Address</label>
 				</div>
 				<div class="d-flex gap-3 justify-content-center mb-3">
@@ -43,12 +43,14 @@
 					<button type="button" class="btn btn-danger btn-sm shadow-none p-2 flex-fill">Delete</button>
 				</div>
 				<div class="d-flex justify-content-center mb-3">
-					<a href="/index.html" class="btn btn-warning btn-sm shadow-none p-2 flex-fill" tabindex="-1" role="button" aria-disabled="true">Cancel</a>
+					<button type="button" class="btn btn-warning btn-sm shadow-none p-2 flex-fill" onclick="return BackHome()">Back Home</button>
 				</div>
 			</div>
 		</form>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/phonebook.js"></script>
 	</body>
 </html>
