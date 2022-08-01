@@ -19,28 +19,28 @@
 		<form class="container-fluid mt-5" style="max-width: 800px;">
 			<div class="container text-white">
 				<figure class="figure d-block mx-auto mb-3">
-					<img class="figure-img img-fluid rounded-circle d-block mx-auto" id="profileImageView" style="max-width: 200px; max-height: 200px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
+					<img class="figure-img img-fluid rounded-circle d-block mx-auto" id="profileImage" style="max-width: 200px; max-height: 200px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
 					<figcaption class="figure-caption text-center text-white fw-bold" id="fullNameCaption">John Doe</figcaption>
 				</figure>
 				<div class="form-floating mb-3 ">
-					<input type="text" readonly class="form-control-plaintext text-white" id="firstNameText" placeholder="John" value="">
+					<input type="text" readonly class="form-control-plaintext text-white" id="firstName" placeholder="First Name">
 					<label for="firstName">First Name</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="text" readonly class="form-control-plaintext text-white" id="lastNameText" placeholder="Doe" value="">
+					<input type="text" readonly class="form-control-plaintext text-white" id="lastName" placeholder="Last Name">
 					<label for="lastName">Last Name</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="text" readonly class="form-control-plaintext text-white" id="phoneNumberText" placeholder="+27840000000" value="">
+					<input type="text" readonly class="form-control-plaintext text-white" id="phoneNumber" placeholder="Phone Number">
 					<label for="phoneNumber">Phone Number</label>
 				</div>
 				<div class="form-floating mb-3">
-					<input type="email" readonly class="form-control-plaintext text-white" id="emailText" placeholder="johndoe@gmail.com" value="">
+					<input type="email" readonly class="form-control-plaintext text-white" id="email" placeholder="Email Address">
 					<label for="email">Email Address</label>
 				</div>
 				<div class="d-flex gap-3 justify-content-center mb-3">
 					<a href="/save-contact.html" class="btn btn-info btn-sm shadow-none p-2 flex-fill" tabindex="-1" role="button" aria-disabled="true">Update</a>
-					<button type="button" class="btn btn-danger btn-sm shadow-none p-2 flex-fill">Delete</button>
+					<button type="button" class="btn btn-danger btn-sm shadow-none p-2 flex-fill" onclick="return DeleteContact()">Delete</button>
 				</div>
 				<div class="d-flex justify-content-center mb-3">
 					<button type="button" class="btn btn-warning btn-sm shadow-none p-2 flex-fill" onclick="return BackHome()">Back Home</button>
