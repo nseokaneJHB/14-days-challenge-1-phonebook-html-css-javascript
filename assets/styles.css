@@ -12,8 +12,15 @@ body {
   background: radial-gradient(at top left, rgb(146, 43, 225) 0%, rgb(43, 9, 107) 100%);
   background-repeat: no-repeat;
   min-height: 100vh;
+  height: 100%;
 }
 
+.contact-card {
+  transition: transform 0.2s;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
 .contact-card:hover {
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(at top left, rgba(146, 43, 225, 0.1) 50%, rgba(43, 9, 107, 0.1) 100%);
+  transform: scale(1.01);
 }/*# sourceMappingURL=styles.css.map */

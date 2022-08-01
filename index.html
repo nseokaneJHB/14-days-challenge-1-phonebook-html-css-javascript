@@ -11,73 +11,103 @@
 	</head>
 
 	<body>
-		<main class="container-fluid">
-			<div class="container-fluid">
-				<div class="container mt-5">
-					<h1 class="text-center text-white text-uppercase fs-1 fw-bold">Contacts</h1>
-				</div>
+		<div class="container-fluid">
+			<div class="container mt-5">
+				<h1 class="text-center text-white text-uppercase fs-1 fw-bold">Contacts</h1>
 			</div>
-			<div class="container-fluid">
-				<div class="container-fluid">
-					<div class="container mt-5">
-						<div class="input-group mb-3 mx-auto" style="max-width: 500px;">
-							<span class="input-group-text">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-									<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-								</svg>
-							</span>
-							<div class="form-floating">
-								<input type="text" class="form-control shadow-none" id="searchText" placeholder="Search Contact...">
-								<label for="searchText">Search Contact</label>
-							</div>
-						</div>
+		</div>
+		<div class="container-fluid">
+			<div class="container mt-5">
+				<div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+					<span class="input-group-text">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+						</svg>
+					</span>
+					<div class="form-floating">
+						<input type="text" class="form-control shadow-none" id="searchText" placeholder="Search Contact...">
+						<label for="searchText">Search Contact</label>
 					</div>
 				</div>
-				<div class="container border mt-5 position-relative" style="max-width: 800px;">
-					<div class="container overflow-auto px-5 py-3"  style="height: 700px;">
-						<div class="row" id="contact-cards-data">
-							<!-- Contact Card -->
-							<div class="col-12 d-flex align-items-center border-bottom rounded contact-card">
-								<!-- Right side of contact -->
-								<a class="p-2 flex-grow-1 text-decoration-none" href="/contact.html">
-									<div class="d-flex align-items-center">
-										<div class="flex-shrink-0">
-											<img class="img-fluid rounded-circle" style="max-width: 50px; max-height: 50px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
-										</div>
-										<div class="flex-grow-1 ms-3">
-											<small class="fs-6 fw-bold text-break lh-1 text-white">John Doe</small>
-											<br>
-											<small class="fs-6 fw-normal text-break lh-1 text-white">+27840000000</small>
-										</div>
+			</div>
+			<div class="position-relative mx-auto mt-5" style="max-width: 700px; min-height: 500px;">
+				<div class="container-fluid overflow-auto">
+					<!-- Contact Card -->
+					<div class="row border-bottom rounded contact-card mx-auto" id="contact-cards-data" style="max-width: 800px;">
+						<div class="col-12 d-flex align-items-center">
+							<!-- Right side of contact -->
+							<a class="py-2 flex-grow-1 text-decoration-none" href="/contact.html">
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<img class="img-fluid rounded-circle" style="max-width: 50px; max-height: 50px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
 									</div>
-								</a>
-								<!-- Left side of contact -->
-								<div class="p-2">
-									<div class="d-flex align-items-center gap-2">
-										<a href="/save-contact.html" class="btn btn-outline-warning btn-sm shadow-none" tabindex="-1" role="button" aria-disabled="true">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-												<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-												<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-											</svg>
-										</a>
-										<button type="button" class="btn btn-outline-danger btn-sm shadow-none">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-												<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
-											</svg>
-										</button>
+									<div class="flex-grow-1 ms-3">
+										<small class="fs-6 fw-semibold text-break lh-1 text-white text-truncate">John Doe</small>
+										<br>
+										<small class="fs-6 fw-lighter text-break lh-1 text-white text-truncate">+27840000000</small>
 									</div>
+								</div>
+							</a>
+							<!-- Left side of contact -->
+							<div class="py-2">
+								<div class="d-flex align-items-center gap-2">
+									<a href="/save-contact.html" class="btn btn-outline-warning btn-sm shadow-none" tabindex="-1" role="button" aria-disabled="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+											<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+											<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+										</svg>
+									</a>
+									<button type="button" class="btn btn-outline-danger btn-sm shadow-none">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+											<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a class="btn btn-info rounded-circle py-2 shadow-none" href="/save-contact.html" role="button" style="position: absolute; bottom: 50px; right: 25px;">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
-						</svg>
-					</a>
+					<!-- Contact Card -->
+					<div class="row border-bottom rounded contact-card mx-auto" id="contact-cards-data" style="max-width: 800px;">
+						<div class="col-12 d-flex align-items-center">
+							<!-- Right side of contact -->
+							<a class="py-2 flex-grow-1 text-decoration-none" href="/contact.html">
+								<div class="d-flex align-items-center">
+									<div class="flex-shrink-0">
+										<img class="img-fluid rounded-circle" style="max-width: 50px; max-height: 50px;" src="https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg" alt="Profile Image">
+									</div>
+									<div class="flex-grow-1 ms-3">
+										<small class="fs-6 fw-semibold text-break lh-1 text-white text-truncate">John Doe</small>
+										<br>
+										<small class="fs-6 fw-lighter text-break lh-1 text-white text-truncate">+27840000000</small>
+									</div>
+								</div>
+							</a>
+							<!-- Left side of contact -->
+							<div class="py-2">
+								<div class="d-flex align-items-center gap-2">
+									<a href="/save-contact.html" class="btn btn-outline-warning btn-sm shadow-none" tabindex="-1" role="button" aria-disabled="true">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+											<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+											<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+										</svg>
+									</a>
+									<button type="button" class="btn btn-outline-danger btn-sm shadow-none">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+											<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<a class="btn btn-info rounded-circle py-2 shadow-none" href="/save-contact.html" role="button" style="position: absolute; bottom: 50px; right: 25px;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+					</svg>
+				</a>
 			</div>
-		</main>
+		</div>		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"></script>
