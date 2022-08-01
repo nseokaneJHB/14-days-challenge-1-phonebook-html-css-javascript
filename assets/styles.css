@@ -23,4 +23,4 @@ body {
 .contact-card:hover {
   background: radial-gradient(at top left, rgba(146, 43, 225, 0.1) 50%, rgba(43, 9, 107, 0.1) 100%);
   transform: scale(1.01);
-}/*# sourceMappingURL=styles.css.map */
+}
