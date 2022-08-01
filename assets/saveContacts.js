@@ -32,7 +32,6 @@ const SaveContact = (event) => {
 		return location.href = "/"
 	}else{
 		let existing_user = contact_list.find(contact => contact.id === user_contact.id)
-		console.log(existing_user);
 
 		existing_user["first_name"] = firstNameInput.value,
 		existing_user["last_name"] = lastNameInput.value,
