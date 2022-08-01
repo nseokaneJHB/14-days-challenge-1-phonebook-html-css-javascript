@@ -17,7 +17,7 @@ let contact_list = JSON.parse(localStorage.getItem("PHONEBOOK_CONTACT_LIST")) ||
 
 const BackHome = async() => {
 	localStorage.removeItem("PHONEBOOK_CONTACT_USER")
-	location.href = "index.html"
+	location.href = "/"
 }
 
 const LoadSingleContact = async() => {
