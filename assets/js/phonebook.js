@@ -25,12 +25,13 @@ const LoadSingleContact = async() => {
 
 	if (user_contact === null) return
 
-	const fullNameCaption = document.getElementById("fullNameCaption")
-	const firstName = document.getElementById("firstName")
-	const lastName = document.getElementById("lastName")
-	const phoneNumber = document.getElementById("phoneNumber")
-	const email = document.getElementById("email")
-	const profileImage = document.getElementById("profileImage")
+	let fullNameCaption = document.getElementById("fullNameCaption")
+	let firstName = document.getElementById("firstName")
+	let lastName = document.getElementById("lastName")
+	let phoneNumber = document.getElementById("phoneNumber")
+	let email = document.getElementById("email")
+	let profileImageSource = document.getElementById("profileImageSource")
+	let profileImage = document.getElementById("profileImage")
 
 	firstName.value = user_contact.first_name
 	lastName.value = user_contact.last_name
@@ -42,11 +43,12 @@ const LoadSingleContact = async() => {
 	}
 
 	if (profileImage instanceof HTMLImageElement) {
-		profileImage.src = user_contact.profile_image
+		profileImageSource.srcset = user_contact.profile_image || "https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg"
+		profileImage.alt = `Picture of ${user_contact.first_name} ${user_contact.last_name}`
 	}
 
 	if (fullNameCaption !== null){
-		fullNameCaption.innerHTML = `${user_contact.first_name} ${user_contact.last_name}`	
+		fullNameCaption.innerHTML = `${user_contact.first_name} ${user_contact.last_name}`
 	}
 }
 

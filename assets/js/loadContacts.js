@@ -11,17 +11,21 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 		// ===================== Create LHS and RHS of the contact card =====================
 		// LHS
 		// Image
+		const img_source = document.createElement("source")
+		img_source.type="image/webp";
+		img_source.srcset = `${user_contact.profile_image}` || "https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg"
+
 		const image = document.createElement("img")
 		image.classList.add("img-fluid", "rounded-circle")
 		image.style.cssText = `
 			width: 50px; 
 			height: 50px;
 		`
-		image.src = `${user_contact.profile_image}` || "https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg"
 		image.alt = "Profile Image"
 
-		const image_container = document.createElement("div")
+		const image_container = document.createElement("picture")
 		image_container.classList.add("flex-shrink-0")
+		image_container.appendChild(img_source)
 		image_container.appendChild(image)
 
 		// Name and Phone Number
@@ -51,7 +55,7 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 		image_name_phone_number_container.appendChild(name_phone_number_container)
 
 		const contact_card_link = document.createElement("a")
-		contact_card_link.classList.add("py-2", "flex-grow-1", "text-decoration-none")
+		contact_card_link.classList.add("flex-grow-1", "text-decoration-none")
 		contact_card_link.appendChild(image_name_phone_number_container)
 		contact_card_link.addEventListener("click", function(){
 			localStorage.setItem("PHONEBOOK_CONTACT_USER", JSON.stringify(user_contact))
@@ -82,7 +86,8 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 		save_contact_link.appendChild(save_contact_link_icon)
 
 		const contact_card_button_container = document.createElement("div")
-		contact_card_button_container.classList.add("py-2", "d-flex", "align-items-center", "gap-2")
+		contact_card_button_container.classList.add("d-flex", "align-items-center", "gap-2")
+		contact_card_button_container.style.border = "1px solid red !important"
 		contact_card_button_container.appendChild(save_contact_link)
 		contact_card_button_container.appendChild(delete_contact_button)
 
