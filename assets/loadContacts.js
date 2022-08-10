@@ -26,7 +26,7 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 
 		// Name and Phone Number
 		const name = document.createElement("small")
-		name.classList.add("fs-6", "fw-semibold", "lh-1")
+		name.classList.add("fs-6", "fw-semibold", "lh-1", "text-white")
 		name.textContent = `${user_contact.first_name} ${user_contact.last_name}`
 
 		const break_line = document.createElement("br")
@@ -36,7 +36,7 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 		phone_number.textContent = `${user_contact.phone_number}`
 
 		const name_phone_number_container = document.createElement("div")
-		name_phone_number_container.classList.add("flex-grow-1", "ms-3", "text-truncate", "text-white)
+		name_phone_number_container.classList.add("flex-grow-1", "ms-3", "text-truncate")
 		name_phone_number_container.style.cssText = `
 			max-width: 150px;
 		`
