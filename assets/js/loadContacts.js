@@ -14,8 +14,8 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 		const image = document.createElement("img")
 		image.classList.add("img-fluid", "rounded-circle")
 		image.style.cssText = `
-			max-width: 50px; 
-			max-height: 50px;
+			width: 50px; 
+			height: 50px;
 		`
 		image.src = `${user_contact.profile_image}` || "https://cdn.imgbin.com/6/25/24/imgbin-user-profile-computer-icons-user-interface-mystique-aBhn3R8cmqmP4ECky4DA3V88y.jpg"
 		image.alt = "Profile Image"
