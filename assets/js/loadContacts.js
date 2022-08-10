@@ -26,17 +26,17 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 
 		// Name and Phone Number
 		const name = document.createElement("small")
-		name.classList.add("fs-6", "fw-semibold", "lh-1", "text-white")
+		name.classList.add("fs-6", "fw-semibold", "lh-1")
 		name.textContent = `${user_contact.first_name} ${user_contact.last_name}`
 
 		const break_line = document.createElement("br")
 
 		const phone_number = document.createElement("small")
-		phone_number.classList.add("fs-6", "fw-lighter", "lh-1", "text-white")
+		phone_number.classList.add("fs-6", "fw-lighter", "lh-1")
 		phone_number.textContent = `${user_contact.phone_number}`
 
 		const name_phone_number_container = document.createElement("div")
-		name_phone_number_container.classList.add("flex-grow-1", "ms-3", "text-truncate")
+		name_phone_number_container.classList.add("flex-grow-1", "ms-3", "text-truncate", "text-white")
 		name_phone_number_container.style.cssText = `
 			max-width: 150px;
 		`
@@ -46,6 +46,7 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 
 		const image_name_phone_number_container = document.createElement("div")
 		image_name_phone_number_container.classList.add("d-flex", "align-items-center")
+		image_name_phone_number_container.style.cursor = "pointer"
 		image_name_phone_number_container.appendChild(image_container)
 		image_name_phone_number_container.appendChild(name_phone_number_container)
 
@@ -87,7 +88,7 @@ const LoadContactsIntoIndex = async(contact_list_data) => {
 
 		// Create a column for the row
 		const column = document.createElement("div")
-		column.classList.add("col-12", "d-flex", "align-items-center")
+		column.classList.add("col-12", "d-flex", "align-items-center", "gap-2")
 		column.appendChild(contact_card_link)
 		column.appendChild(contact_card_button_container)
 
