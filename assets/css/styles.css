@@ -1,0 +1,23 @@
+* {
+  transition: all 0.2s ease-in;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.img-fluid {
+  -o-object-fit: fill !important;
+     object-fit: fill !important;
+}
+
+.btn, input {
+  box-shadow: none !important;
+}/*# sourceMappingURL=styles.css.map */

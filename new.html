@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Phonebook - Add Contact</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="shortcut icon" href="/assets/icons/phonebook.png" type="image/x-icon">
+	</head>
+
+	<body>
+		<div class="container-fluid p-4">
+			<div class="container mb-4">
+				<h1 class="text-center">New Contact</h1>
+			</div>
+			<div class="container d-flex flex-column align-items-center">
+				<div class="card" style="width: 500px;">
+					<form class="card-body" onsubmit="return saveNewContacts(event)">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="full_name" name="full_name" placeholder="John Doe" required>
+							<label for="full_name">Full Name</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="+27000000000" required>
+							<label for="phone_number">Phone Number</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="email_address" name="email_address" placeholder="j.doe@example.com">
+							<label for="email_address">Email address</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="url" class="form-control" id="image_url" name="image_url" placeholder="www.google.com">
+							<label for="image_url">Image Url</label>
+						</div>
+						<div class="d-flex gap-3 justify-content-center mb-3">
+							<input type="submit" class="btn btn-lg btn-success btn-sm shadow-none p-2 flex-fill" value="Save" />
+							<a class="btn btn-lg btn-secondary btn-sm shadow-none p-2 flex-fill" href="/" tabindex="-1" role="button" aria-disabled="true">Back Home</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="/assets/js/saveContact.js"></script>
+	</body>
+</html>
