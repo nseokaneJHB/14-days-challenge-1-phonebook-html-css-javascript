@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+input, button, a {
+  box-shadow: none !important;
+}/*# sourceMappingURL=styles.css.map */
